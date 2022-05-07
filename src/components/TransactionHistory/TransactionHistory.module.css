@@ -1,0 +1,36 @@
+.transactionHistory {
+  width: 750px;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+}
+
+.currentTransaction {
+  background-color: #fff;
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.currentTransaction:hover {
+  color: #ff0000;
+  background-color: #40ff00;
+}
+
+.currentTransaction:nth-child(2n + 2) {
+  background-color: #aec1b1;
+}
+
+.currentTransaction:nth-child(2n + 2):hover {
+  color: #ff0000;
+  background-color: #40ff00;
+}
+
+.th {
+  padding: 10px;
+  color: #fff;
+  background-color: #0066ff;
+}
+
+.td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
