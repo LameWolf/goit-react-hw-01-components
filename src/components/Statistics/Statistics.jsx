@@ -7,7 +7,7 @@ export const Statistics = ({ title, stats }) => {
   return (
     <Container>
       <section className={style.statistics}>
-        <h2 className={style.title}>{title}</h2>
+        {title && <h2 className={style.title}>{title}</h2>}
         <ul className={style.statList}>
           {stats.map(({ id, label, percentage }) => {
             return (
@@ -28,6 +28,12 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ).isRequired,
 };

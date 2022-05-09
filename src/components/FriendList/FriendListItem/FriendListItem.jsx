@@ -5,12 +5,7 @@ import defaultAvatar from './defaultAvatar.png';
 export const FriendListItem = ({ src, name, isOnline }) => {
   return (
     <li className={style.item}>
-      <span
-        className={style.status}
-        style={
-          isOnline ? { backgroundColor: 'green' } : { backgroundColor: 'red' }
-        }
-      ></span>
+      <span className={isOnline ? style.online : style.offline}></span>
       <img
         className={style.avatar}
         src={src || defaultAvatar}

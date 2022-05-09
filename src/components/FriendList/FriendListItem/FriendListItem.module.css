@@ -15,10 +15,16 @@
   margin-bottom: 0px;
 }
 
-.status {
+.online {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  background-color: #08b808;
+}
+
+.offline {
+  composes: online;
+  background-color: #bb0a0a;
 }
 
 .avatar {
