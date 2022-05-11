@@ -13,7 +13,7 @@ export const FriendList = ({ friends }) => {
             src={avatar}
             name={name}
             isOnline={isOnline}
-          ></FriendListItem>
+          />
         ))}
       </ul>
     </Container>
