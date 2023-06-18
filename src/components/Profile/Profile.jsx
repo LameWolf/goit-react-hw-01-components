@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-import user from './user.json';
 
-export const Profile = () => {
-  const { avatar, username, tag, location, stats } = user;
+export const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
     <div className={s.profile}>
       <div className={s.description}>
